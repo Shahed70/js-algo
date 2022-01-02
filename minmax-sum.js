@@ -16,3 +16,23 @@ console.log(Number(min) + " " + Number(max));
 }
 
 miniMaxSum(arr)
+
+
+function miniMaxSum(arr) {
+    let sum = arr.reduce((a, b) => a + b);
+    let maxVal = Math.max(...arr);
+    let minVal = Math.min(...arr);
+    console.log((sum - maxVal) + ' ' + (sum - minVal));
+}
+
+
+let numbers = arr.slice('').sort();
+    let maxScore = 0;
+    let minScore = 0;
+    for(let i = 0; i < numbers.length - 1; i++) {
+        minScore += numbers[i];
+    };
+    for(let j = 1; j < numbers.length; j++) {
+        maxScore += numbers[j];
+    };
+    console.log(`${minScore} ${maxScore}`);
